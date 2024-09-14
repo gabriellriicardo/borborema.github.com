@@ -30,12 +30,3 @@ CSS: Estilo e layout da página.
 JavaScript: Funcionalidades dinâmicas, como carregamento de dados e atualização de tempo.
 🤝 Contribuição
 Contribuições são bem-vindas! Se você encontrar um problema ou tiver uma sugestão para melhorar o projeto, sinta-se à vontade para abrir uma issue ou fazer um pull request.
-
-📄 Licença
-Este projeto está licenciado sob a Licença MIT.
-
-📧 Contato
-Para mais informações, entre em contato com seu-email@dominio.com.
-
-
-Sinta-se à vontade para ajustar qualquer parte para se adequar melhor ao seu projeto!
