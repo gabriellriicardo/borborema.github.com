@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borborema - Grupo de Transporte</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            position: relative;
+            padding: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+        .info-box {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul li:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .sidebar {
+            flex: 1;
+            min-width: 200px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .content {
+            flex: 2;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .action-button {
+            padding: 15px 25px;
+            background-color: #ffcc00;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+        }
+        .action-button:hover {
+            background-color: #e6b800;
+            transform: scale(1.05);
+        }
+        .hours {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="banner.png" alt="Banner Borborema" class="banner">
+        <div class="info-box">
+            <div id="city">Recife-PE</div>
+            <div id="date">Data: Carregando...</div>
+            <div id="time">Hora: Carregando...</div>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#empresa">A Empresa</a></li>
+                <li><a href="#turismo">Turismo</a></li>
+                <li><a href="#propagandas">Propagandas</a></li>
+                <li><a href="#sac">SAC</a></li>
+                <li><a href="#fornecedores">Fornecedores</a></li>
+                <li><a href="#veiculos">Veículos à venda</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section id="destaque">
+                <h2>Bem-vindo à Borborema</h2>
+                <p>Líder em transporte rodoviário no Nordeste.</p>
+            </section>
+
+            <div class="action-buttons">
+                <a href="#recarga" class="action-button">Recarga de Vale Transporte</a>
+                <a href="#propagandas" class="action-button">Propagandas</a>
+            </div>
+        </main>
+
+        <aside class="hours">
+            <h2>Linhas de Ônibus</h2>
+            <label for="routes">Selecione a linha:</label>
+            <select id="routes" onchange="showSchedule()">
+                <option value="">Selecione a linha</option>
+            </select>
+
+            <div id="schedule" style="display:none; margin-top: 20px;">
+                <h3>Detalhes da linha</h3>
+                <p id="scheduleDetails">Selecione uma linha para ver os detalhes.</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>GRUPO BORBOREMA</p>
+            <p>Rua Almirante Saldanha da Gama, 127 - Boa Viagem - Recife - PE - CEP: 51.130-220</p>
+            <p>SAC: 0800-7048774 | Data: 14/09/2024</p>
+            <a href="#fale-conosco">Fale Conosco</a>
+        </div>
+    </footer>
+
+    <script>
+        // Função para atualizar a hora e data
+        function updateTimeAndDate() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+            document.getElementById('date').textContent = `${day}/${month}/${year}`;
+            document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Função para carregar as rotas a partir do arquivo linhas.txt
+        function loadRoutes() {
+            fetch('linhas.txt')
+                .then(response => response.text())
+                .then(data => {
+                    const routes = data.split('\n');
+                    const selectElement = document.getElementById('routes');
+                    
+                    routes.forEach(route => {
+                        const [name, type, extension, price] = route.split(';');
+                        if (name) { // Verifica se a linha não está vazia
+                            const option = document.createElement('option');
+                            option.value = name;
+                            option.textContent = name; // Nome da linha exibido no dropdown
+                            selectElement.appendChild(option);
+                        }
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar as linhas:', error));
+        }
+
+        // Função para exibir os detalhes da linha selecionada
+        function showSchedule() {
+            const selectedRoute = document.getElementById('routes').value;
+            const scheduleDiv = document.getElementById('schedule');
+            const scheduleDetails = document.getElementById('scheduleDetails');
+
+            fetch('linhas.txt')
+                .then(response => response.text())
+                .then(data => {
+                    const routes = data.split('\n');
+                    const route = routes.find(line => line.startsWith(selectedRoute));
+                    if (route) {
+                        const [name, type, extension, price] = route.split(';');
+                        scheduleDetails.innerHTML = `
+                            <p><strong>Nome:</strong> ${name}</p>
+                            <p><strong>Tipo de Linha:</strong> ${type}</p>
+                            <p><strong>Extensão:</strong> ${extension}</p>
+                            <p><strong>Preço:</strong> ${price}</p>
+                        `;
+                    } else {
+                        scheduleDetails.innerHTML = '<p>Selecione uma linha para ver os detalhes.</p>';
+                    }
+                    
+                    // Exibe a div de detalhes
+                    scheduleDiv.style.display = 'block';
+                });
+        }
+
+        // Carrega as rotas quando a página é carregada
+        document.addEventListener('DOMContentLoaded', () => {
+            loadRoutes();
+            updateTimeAndDate();
+            setInterval(updateTimeAndDate, 1000);
+        });
+    </script>
+</body>
+</html>
