@@ -47,7 +47,7 @@ Sugestões e contribuições são bem-vindas! Sinta-se à vontade para abrir uma
 
 ## 👤 Autor
 
-Este projeto foi criado por [Seu Nome/Username].
+Este projeto foi criado por Gabriel Ricardo.
 
 ---
 
