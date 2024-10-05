@@ -30,8 +30,8 @@ Este site foi desenvolvido como um exercício de programação web, inspirado no
 
 ## 🚀 Como Usar ou Contribuir
 
-1. Clone o repositório:
-2. 2. Abra o arquivo `index.html` em seu navegador
+1. Clone o repositório: git clone https://github.com/gabriellriicardo/redoviariaborborema.io.git
+2. Abra o arquivo `index.html` em seu navegador
 3. Para contribuir, faça um fork do projeto e submeta um pull request
 
 ## 📂 Estrutura do Projeto
