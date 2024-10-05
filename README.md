@@ -49,10 +49,6 @@ Sugestões e contribuições são bem-vindas! Sinta-se à vontade para abrir uma
 
 Este projeto foi criado por [Seu Nome/Username].
 
-## 📜 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ---
 
 Lembre-se: Este é um projeto de estudo e não possui afiliação com a empresa real Borborema.
