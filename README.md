@@ -1,32 +1,63 @@
-# 🚍 Borborema - Grupo de Transporte
+# 🚌 Borborema - Grupo de Transporte
 
-Bem-vindo ao projeto Borborema, um site para o Grupo de Transporte Borborema. Este site fornece informações sobre linhas de ônibus, incluindo horários e detalhes de cada linha.
+Bem-vindo ao projeto da Rodoviária Borborema! Uma experiência digital para o maior grupo de transporte do Nordeste.
 
-## 📜 Descrição
+## 🌟 Destaques
 
-Este projeto consiste em uma página web que exibe informações sobre as linhas de ônibus do Grupo Borborema. A página inclui:
+- 🖥️ **Site Responsivo**: Adaptável a qualquer dispositivo
+- 🕒 **Informações em Tempo Real**: Horários e datas atualizados automaticamente
+- 🗺️ **Linhas Dinâmicas**: Carregamento inteligente de rotas e detalhes
+- 💼 **Recarga Fácil**: Sistema integrado para recarga de Vale Transporte
 
-- 🕒 **Atualização em Tempo Real**: A data e a hora são atualizadas automaticamente a cada segundo.
-- 🗂️ **Carregamento Dinâmico de Linhas**: As linhas de ônibus são carregadas dinamicamente a partir de um arquivo `linhas.txt`.
-- 📋 **Exibição de Detalhes da Linha**: Detalhes da linha selecionada são exibidos quando uma linha é selecionada no dropdown.
+## 🔗 Acesse Agora!
 
-## 🗂️ Estrutura do Projeto
+[🚀 Visite o Site da Borborema](https://gabriellriicardo.github.io/redoviariaborborema.io/)
 
-- **index.html**: Página principal do projeto.
-- **linhas.txt**: Arquivo de dados contendo informações sobre as linhas de ônibus.
+## 📋 O Que Oferecemos
 
-## 🚀 Como Usar
+- **Informações da Empresa**: Conheça nossa história e missão
+- **Turismo**: Descubra destinos incríveis
+- **SAC Online**: Atendimento rápido e eficiente
+- **Área do Fornecedor**: Espaço dedicado aos nossos parceiros
+- **Veículos à Venda**: Oportunidades únicas no mercado de transporte
 
-1. **Clonar o Repositório**:
-   ```bash
-   git clone https://github.com/usuario/repositorio.git
-Abrir o Projeto: Abra o arquivo index.html em um navegador da web para visualizar o site.
+## 🛠️ Tecnologias Utilizadas
 
-Atualizar o Arquivo de Linhas: Certifique-se de que o arquivo linhas.txt esteja no mesmo diretório que index.html e siga o formato:
-Nome da Linha;Tipo de Linha;Extensão;Preço
-💻 Tecnologias Utilizadas
-HTML: Estrutura da página.
-CSS: Estilo e layout da página.
-JavaScript: Funcionalidades dinâmicas, como carregamento de dados e atualização de tempo.
-🤝 Contribuição
-Contribuições são bem-vindas! Se você encontrar um problema ou tiver uma sugestão para melhorar o projeto, sinta-se à vontade para abrir uma issue ou fazer um pull request.
+- **HTML5**: Estruturação moderna e semântica
+- **CSS3**: Estilização avançada e responsiva
+- **JavaScript**: Interatividade e dinamismo
+- **GitHub Pages**: Hospedagem confiável e gratuita
+
+## 🚀 Como Contribuir
+
+1. Faça um Fork do projeto
+2. Crie uma Branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a Branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📂 Estrutura do Projeto
+
+- `index.html`: Coração do nosso site
+- `style.css`: Toda a beleza visual
+- `script.js`: Magia da interatividade
+- `linhas.txt`: Banco de dados simplificado das nossas rotas
+
+## 🤝 Suporte
+
+Encontrou um bug? Tem uma ideia incrível? Abra uma [issue](https://github.com/gabriellriicardo/redoviariaborborema.io/issues) e vamos conversar!
+
+## 📞 Contato
+
+**Grupo Borborema**
+- 📍 Rua Almirante Saldanha da Gama, 127 - Boa Viagem, Recife - PE
+- 📞 SAC: 0800-7048774
+- 📧 [contato@borborema.com.br](mailto:contato@borborema.com.br)
+
+## 📜 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Feito com ❤️ pelo time Borborema
